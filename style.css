@@ -1,0 +1,178 @@
+body {
+  font: 0.8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  height: 0;
+  display: none;
+}
+
+a {
+  color: #ff6464;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+path {
+  stroke: #999;
+  fill: #e0e0e0;
+}
+
+section.head {
+  margin: 180px 0px 0px 80px;
+  width: 700px;
+}
+
+section.head.up {
+  margin-top: 80px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.img {
+  display: inline-block;
+}
+
+section.img div {
+  background-color: #eee;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px 0px #333;
+}
+
+section.focus {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0px 0px 30px;
+  padding-left: 40px;
+  border-left: 1px solid #eee;
+  width: 400px;
+}
+
+section.main {
+  position: relative;
+  margin-left: 170px;
+  margin-top: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  width: 400px;
+  height: 185px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  opacity: 1;
+  overflow: hidden;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.main.hide {
+  margin-top: 0px;
+  padding: 0px;
+  height: 0px;
+  line-height: 0.5;
+  opacity: 0;
+}
+
+section.main ul li {
+  padding: 4px 15px;
+}
+
+section.main ul li span {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+section.main ul li a {
+  color: inherit;
+}
+
+section.main ul li a:hover {
+  color: inherit;
+  color: #ff6464;
+}
+
+.view {
+  width: 400px;
+}
+
+.view.ng-enter, .view.ng-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+}
+
+.view.ng-enter {
+  opacity: 1;
+  left: 100%
+}
+
+.view.ng-enter.ng-enter-active {
+  opacity: 1;
+  left: 0;
+}
+
+.view.ng-leave.ng-leave-active {
+  opacity: 0;
+  left:-100%;
+}
+
+nav {
+  margin: 60px 0px 50px 150px;
+  font: 1.1em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  width: 700px;
+  clear: both;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul li {
+  display: inline-block;
+  border-right: 1px solid #eee;
+  padding: 0px 30px;
+}
+
+nav ul li a {
+  color: #666;
+  padding: 1px 0px;
+}
+
+nav ul li:nth-last-child(1) {
+  border: none;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #ff6464;
+  color: #ff6464;
+}
+
+div.title {
+  font: 50px Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #555;
+  line-height: 0.8;
+}
+
+div.subtitle {
+  color: #ccc;
+}

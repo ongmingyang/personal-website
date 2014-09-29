@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+  Homepage
+  Ong Ming Yang <me@ongmingyang.com>
+  2014
+-->
+<html ng-app="fooApp">
+<head>
+<meta name="description" content="MIT student Ong Ming Yang enjoys reading and writing. His academic interests lie in applied computation, specifically in areas related to performance and optimization.">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-animate.min.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="icomoon/style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Ong Ming Yang | Homepage</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30733319-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+</head>
+<!-- display: none required for html flicker -->
+<body ng-controller="mainController">
+  <svg ng-controller="voronoiController"></svg>
+  <section class="head" ng-class="{ up: expanded==true }">
+    <section class="img">
+      <div>
+        <img alt="Ming Yang" src="img.jpg" height="100%">
+      </div>
+    </section>
+    <section class="focus">
+      <div class="title">
+        mingy
+      </div>
+      <div class="title subtitle">
+        non-descript student at MIT
+      </div>
+    </section>
+  </section>
+  <section class="main" ng-class="{ hide: expanded==false }">
+    <div ng-view class="view"></div>
+  </section>
+  <nav>
+    <ul>
+      <li><a href="#/about" ng-click="expand()">about</a></li>
+      <li><a href="#/contact" ng-click="expand()">contact</a></li>
+      <li><a href="#/links" ng-click="expand()">links</a></li>
+      <li><a href="resume.pdf">resum&eacute;</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
